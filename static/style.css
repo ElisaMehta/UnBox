@@ -1,0 +1,293 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: 0px solid pink;
+}
+
+.container {
+    width: 700px;
+    height: 400px;
+    margin: 0px auto;
+    background-color: rgba(255, 105, 180, 0.336);
+    padding: 30px;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    
+}
+
+#container_login {
+    width: 800px;
+    height: 450px;
+    margin: 0px auto;
+    background-color: rgba(255, 105, 180, 0.336);
+    padding: 25px;
+    border-radius: 20px;    
+}
+
+
+#loginheader img {
+    vertical-align: top;
+    width: 300px;
+    display: inline-block;
+      
+}
+
+#loginheader h1 {
+    color: rgb(255, 0, 0);
+    font-family: cursive;
+    display: inline-block;
+}
+#loginheader {
+    display: inline-block;
+    text-align: center;
+    margin-right: 50px;
+    margin-left: 100px;
+}
+
+#loginheader h3 {
+    color: rgb(128, 39, 212) ;
+    display: inline-block;
+}
+
+#loginheader li {
+    list-style: none;
+    
+}
+
+#container_login img {
+    vertical-align: top;
+    height: 100px;
+    width: 380px;
+    /* margin-left: 150px; */
+    display: inline-block;
+    border-radius: 20px;   
+}
+
+
+.info h3 {
+    color: rgb(128, 39, 212) ;
+    vertical-align: middle;
+    margin-top: 15px;
+    margin-bottom: 5px;   
+}
+
+
+.info {
+    margin: 0px, auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    
+}
+
+.info p {
+    padding: 5px;
+    
+}
+
+.container h1 {
+    color: rgb(255, 0, 0);
+    font-family: cursive;
+    display: inline-block;
+    margin-right: 200px;
+}
+
+
+
+.navigation {
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 10px;
+    color: slategray;
+    
+}
+
+.navigation ul {
+    text-align: right;
+    margin-bottom: 30px;
+    
+}
+
+.navigation li {
+    display: inline-block;
+    
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+
+}
+.navigation a {
+    padding-inline-start: 6px;
+    padding-inline-end: 6px;
+    color: slategray;
+    
+}
+
+h2 {
+    color: rgb(128, 39, 212);
+    text-align: center; 
+    margin-top: 25px;
+}
+
+
+.pricing {
+    text-align: center; 
+    padding: 20px;
+
+}
+.pricing p {
+   padding: 5px;
+   font-size: 18px;
+   margin-bottom: 5px;
+}
+
+
+a {
+    color: blueviolet;
+}
+
+h4 a {
+    color: blueviolet;
+    
+}
+
+h4 {
+    display: inline-block;
+
+}
+
+.login_page {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 100px;
+    font-size: larger;
+    margin-top: 25px;
+}
+
+.login_page p {
+    padding-bottom: 5px;
+}
+
+.login_page h4 {
+    padding-bottom: 10px;
+    margin-left: 40px;
+    color: rgb(255, 0, 0);
+}
+
+.schedule form {
+    margin-top: 35px;
+    text-align: center;
+    font-size: 16px;
+
+}
+
+.schedule form p {
+    padding: 5px;
+    text-align: center;
+}
+
+
+.middle h3 {
+    color: rgb(128, 39, 212) ;
+    vertical-align: middle;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    
+}
+
+.account {
+    display: inline-block;
+    margin-left: 70px;
+}
+
+.account ul {
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.account li {
+    margin-top: 2px;
+   
+}
+
+.account a {
+    font-size: 15px;
+    
+}
+
+.history {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 150px;
+}
+.history ul {
+    list-style: none;
+
+}
+.history li {
+    padding: 4px;
+    font-size: 14px;
+}
+
+
+
+.lists ul {
+    margin-top: 8px;
+    padding: 8px;
+    list-style: none;
+}
+
+.lists {
+    margin-top: 10px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.lists button {
+    font-size: 14px;
+
+}
+
+.lists h3 {
+    color: rgb(128, 39, 212) ;
+    vertical-align: middle;
+    margin-top: 10px;    
+}
+
+.lists h5 {
+    color: rgb(255, 0, 0);
+}
+
+.lists a {
+    font-size: 15px;
+    
+
+}
+
+
+
+.buttons {
+    text-align: right;
+    margin-right: 100px;
+}
+.buttons button {
+    font-size: 14px;
+}
+
+.edit_form {
+    font-size: large;
+    margin-top: 20px;
+
+}
+.edit_form p {
+    padding: 5px;
+}
+
+.container h3 {
+    color: rgb(128, 39, 212) ;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    
+}
