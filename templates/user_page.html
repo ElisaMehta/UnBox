@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>UnBox My Account</title>
+</head>
+<body>
+    <div class="container">
+        <h1>UnBox</h1>
+        <div class="navigation">
+            <ul>
+                <li><a href="/schedule">Schedule Pickup</a>|</li>
+                <li><a href="price">Pricing</a>|</li>
+                <li><a href="/logout">Logout</a></li>    
+            </ul>
+        </div>
+        <hr>
+        <div class="middle">
+            <div class="account">
+                {% for cur_user in all_users %}
+                <h3>Hi {{cur_user.first_name}}!</h3>
+                {% endfor %}
+                <ul>
+                    {% for cur_user in all_users %}
+                    <li>Name: {{cur_user.first_name}} {{cur_user.last_name}} </li>
+                    <li>Email: {{cur_user.email}}</li>
+                    {% endfor %}
+                    <a href="/edit/user">Edit</a>
+                </ul>  
+                <ul>
+                    {% for cur_address in all_addresses %}
+                    <li>Address:</li>
+                    <li>{{cur_address.address}}</li>
+                    <li>{{cur_address.city}}, {{cur_address.state}}</li>
+                    {% endfor %}
+                    <a href="/edit/address">Edit</a>
+                </ul>
+            </div>
+            <div class="history">
+                <h3>Pickups</h3>
+                <ul>
+                    {% for history in all_schedules %}
+                    <li>{{history.date}} @ {{history.time}}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <hr>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

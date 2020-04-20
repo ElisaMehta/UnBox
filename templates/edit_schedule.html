@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>UnBox Edit Pickup</title>
+</head>
+<body>
+    <div class="container">
+        <h1>UnBox</h1>
+        <h3>Edit Pickup</h3>
+        <div class="edit_form">
+            {% for schedule in all_schedules %}
+            <form action="/update/schedule/{{schedule.id}}" method="POST">
+                <p>Date: <input type="date" name="date" value="{{schedule.date}}"></p>
+                <p>Time: <input type="time" name="time" value="{{schedule.time}}"></p>
+                <p>Breakdown option:
+                    <select name="box">
+                        <option value="{{schedule.option}}">"{{schedule.option}}"</option>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                <p>Phone <input type="phone" name="phone" value="{{schedule.phone}}"></p>
+                <input type="submit" value="Update">    
+                <a href="/confirmation"><button>Back</button></a>                  
+            </form>
+            {% endfor %}
+
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}   
+        </div>
+    </div>
+</body>
+</html>

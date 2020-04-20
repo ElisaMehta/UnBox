@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>UnBox Pickup Confirmation</title>
+</head>
+<body>
+    <div class="container">
+        <h1>UnBox</h1>
+        <div class="lists">
+            {% for cur_user in all_users %}
+            <h3>Confirmation for {{cur_user.first_name}} {{cur_user.last_name}}</h3>
+            {% endfor %}
+            <ul>
+                {% for user_address in all_addresses %}
+                <h5>Address:</h5>
+                <li>{{user_address.address}}</li>
+                <li>{{user_address.city}}, {{user_address.state}} </li>
+                {% endfor %}
+                <a href="/edit/address">Edit</a>
+            </ul>
+            <ul>
+                {% for pickup in all_schedules %}
+                <h5>Scheduled Pickup:</h5>
+                <li>Date: {{pickup.date}} at {{pickup.time}}</li>
+                <li>Breakdown: {{pickup.option}}</li>
+                <li>Phone: {{pickup.phone}}</li>
+                {% endfor %}
+                <a href="/edit/schedule">Edit</a>
+            </ul>
+        </div>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <div class="buttons">
+        <a href="/user_page"><button>Confirm</button></a>
+        {% for schedule in all_schedules %}
+        <a href="/delete/{{schedule.id}}"><button>Cancel Pickup</button></a>
+        {% endfor %}
+    </div>
+    </div>
+
+
+    
+    
+</body>
+</html>
+

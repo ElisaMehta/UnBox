@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>UnBox Edit Account</title>
+</head>
+<body>
+    <div class="container">
+        <h1>UnBox</h1>
+        <h3>Edit Account</h3>
+        <div class="edit_form"
+            {% for user in all_users %}
+            <form action="/update/user/{{user.id}}" method="POST">
+                <p>First Name <input type="text" name="fname" value="{{user.first_name}}"></p>
+                <p>Last Name <input type="text" name="lname" value="{{user.last_name}}"></p>
+                <p>Email <input type="text" name="email" value="{{user.email}}"></p>
+                <input type="submit" value="Update">
+                <a href="/user_page"><button>Back</button></a>
+            </form>
+            {% endfor %}
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        </div>
+    </div>
+</body>
+</html>

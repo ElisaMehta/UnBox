@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>UnBox Schedule Pickup</title>
+</head>
+<body>
+    <div class="container">
+        <h1>UnBox</h1>
+        <div class="navigation">
+            <ul>
+                <li><a href="/user_page">Account</a>|</li>  
+                <li><a href="/price">Pricing</a>|</li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+        
+        <div class="schedule">
+            <form action="/process/schedule" method="POST">
+                <hr>
+                <p>Date <input type="date" name="date"></p>
+                <p>Time <input type="time" name="time"></p>
+                <p>Breakdown my boxes (+$40)
+                    <select name="box">
+                        <option placeholder="select"></option>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </p>
+                <p>Phone <input type="number" name="phone"></p>
+                <p><textarea name="note" id="" cols="25" rows="4" placeholder="Notes:"></textarea></p>
+                <input type="submit" value="Schedule">
+            </form>
+            
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
+        <hr>
+    </div>
+    
+</body>
+</html>
